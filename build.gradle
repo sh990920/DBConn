@@ -1,0 +1,46 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.5'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	//data JPA
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	//db JDBC
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	//타임리프
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	//웹
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	//얘가 뭐지
+	implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+	//롬복
+	compileOnly 'org.projectlombok:lombok'
+	//mariadb 사용
+	//버전차이 일수도 있으니까 남겨두고
+	implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.7.5'
+	//runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+	//롬복
+	annotationProcessor 'org.projectlombok:lombok'
+	//test용
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

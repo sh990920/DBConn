@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymelfaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h1>회원가입 이후 테스트</h1>
+  <ul>
+      <li><span>Name : </span><span th:text="${add.getName()}"></span><span> 님 환영합니다.(name)</span></li>
+      <li><span>ID : </span><span th:text="${add.getId()}"></span><span> (id)</span></li>
+      <li><span>age : </span><span th:text="${add.getAge()}"></span><span> 살(age)</span></li>
+      <li><span>Email : </span><span th:text="${add.getEmail()}"></span><span> (email)</span></li>
+      <li>
+          <form action="/" method="get">
+              <input type="submit" value="메인으로">
+          </form>
+      </li>
+  </ul>
+</body>
+</html>

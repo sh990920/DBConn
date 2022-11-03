@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymelfaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>검색 결과 테스트</h1>
+    <ul>
+        <li><span>name : </span><span th:text="${find.getName()}" id="tx_name"></span><span> name</span></li>
+        <li><span>id : </span><span th:text="${find.getId()}" id="tx_id"></span><span> id</span></li>
+        <li><span>age : </span><span th:text="${find.getAge()}" id="tx_age"></span><span> age</span></li>
+        <li><span>email : </span><span th:text="${find.getEmail()}" id="tx_email"></span><span> email</span></li>
+        <li>
+            <form action="/" method="get">
+                <input type="submit" value="메인으로">
+            </form>
+        </li>
+    </ul>
+    <!--<script>
+        const tx_name = document.getElementById("tx_name");
+        const tx_id = document.getElementById("tx_id");
+        const tx_age = document.getElementById("tx_age");
+        const tx_email = document.getElementById("tx_email");
+    </script>-->
+</body>
+</html>
